@@ -1,7 +1,8 @@
 # Public showcase allowlist: ignore everything unless explicitly listed below.
-# Never force-add source code, manuscripts, research data, or internal results.
+# Only Figure 1 is approved for display. Never force-add other research materials.
 *
 !.gitignore
 !README.md
 !assets/
 !assets/hero.svg
+!assets/figure1.png
