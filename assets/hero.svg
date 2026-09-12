@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">AbsorbEvo</title>
+  <desc id="desc">An original abstract research banner with cyan wave contours and a warm orange accent on a deep blue background.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091B32"/>
+      <stop offset="1" stop-color="#10374B"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#53D9DC" stop-opacity="0.1"/>
+      <stop offset="0.6" stop-color="#53D9DC" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#C5F4EB" stop-opacity="0.25"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#39BFC6" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#39BFC6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#BDE3E6" stroke-width="0.7" opacity="0.07"/>
+    </pattern>
+    <clipPath id="frame"><rect width="1200" height="380" rx="18"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="380" fill="url(#background)"/>
+    <rect width="1200" height="380" fill="url(#grid)"/>
+    <ellipse cx="973" cy="175" rx="360" ry="330" fill="url(#glow)"/>
+    <g fill="none" stroke="url(#wave)" stroke-width="1.4">
+      <path d="M685 395C750 330 716 235 793 185S989 178 1043 98S1087-20 1212-35"/>
+      <path d="M711 401C776 336 742 241 819 191S1015 184 1069 104S1113-14 1238-29"/>
+      <path d="M737 407C802 342 768 247 845 197S1041 190 1095 110S1139-8 1264-23"/>
+      <path d="M763 413C828 348 794 253 871 203S1067 196 1121 116S1165-2 1290-17"/>
+      <path d="M789 419C854 354 820 259 897 209S1093 202 1147 122S1191 4 1316-11"/>
+      <path d="M815 425C880 360 846 265 923 215S1119 208 1173 128S1217 10 1342-5"/>
+      <path d="M841 431C906 366 872 271 949 221S1145 214 1199 134S1243 16 1368 1"/>
+      <path d="M867 437C932 372 898 277 975 227S1171 220 1225 140S1269 22 1394 7"/>
+    </g>
+    <circle cx="984" cy="177" r="68" fill="none" stroke="#8EE6DD" stroke-width="0.8" opacity="0.22"/>
+    <circle cx="984" cy="177" r="93" fill="none" stroke="#8EE6DD" stroke-width="0.8" opacity="0.1"/>
+    <circle cx="1042" cy="142" r="6" fill="#F6AE70"/>
+    <circle cx="1042" cy="142" r="14" fill="none" stroke="#F6AE70" stroke-width="1" opacity="0.3"/>
+    <path d="M68 75H104" stroke="#F6AE70" stroke-width="3"/>
+    <text x="119" y="80" fill="#95B5C5" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" letter-spacing="3">RESEARCH PROJECT</text>
+    <text x="65" y="187" fill="#F1F7FA" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" letter-spacing="-2.4">AbsorbEvo</text>
+    <text x="69" y="235" fill="#C5DDE7" font-family="Arial, Helvetica, sans-serif" font-size="22">AI-Assisted Design of</text>
+    <text x="69" y="267" fill="#C5DDE7" font-family="Arial, Helvetica, sans-serif" font-size="22">Microwave-Absorbing Structures</text>
+    <path d="M69 318H530" stroke="#7095A9" stroke-width="0.8" opacity="0.35"/>
+    <text x="69" y="345" fill="#81A8BB" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="2">PHYSICS · COMPUTATION · DESIGN</text>
+  </g>
+</svg>

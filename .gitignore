@@ -1,0 +1,7 @@
+# Public showcase allowlist: ignore everything unless explicitly listed below.
+# Never force-add source code, manuscripts, research data, or internal results.
+*
+!.gitignore
+!README.md
+!assets/
+!assets/hero.svg
