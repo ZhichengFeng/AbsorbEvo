@@ -1,0 +1,99 @@
+{
+  "schema_version": "absorbbench36.task.v1",
+  "benchmark": "AbsorbBench-36",
+  "release": "1.0.0",
+  "task_id": "AB36-TPMS-D02",
+  "family": "TPMS",
+  "split": "development",
+  "objective": {
+    "frequency_band_GHz": [
+      5.0,
+      16.0
+    ],
+    "angles_deg": [
+      50.0
+    ],
+    "azimuth_deg": 0,
+    "polarizations": [
+      "TE",
+      "TM"
+    ],
+    "reflection_loss_threshold_dB": -4.5,
+    "required_coverage": 0.925,
+    "aggregation": "equal_mean_over_angles_and_selected_polarizations"
+  },
+  "design_space": {
+    "parameterization": "LEVEL_LEGACY",
+    "variables": {
+      "level_half_width": {
+        "type": "number",
+        "minimum": 0.22,
+        "maximum": 0.42,
+        "unit": "dimensionless"
+      },
+      "period_mm": {
+        "type": "number",
+        "minimum": 10.0,
+        "maximum": 20.0,
+        "unit": "mm"
+      },
+      "topology": {
+        "type": "string",
+        "enum": [
+          "Primitive",
+          "Gyroid",
+          "Diamond"
+        ]
+      },
+      "material_id": {
+        "type": "string",
+        "enum": [
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7",
+          "M8"
+        ]
+      }
+    },
+    "fixed_parameters": {
+      "grid_size": [
+        64,
+        64,
+        64
+      ],
+      "number_of_periods_xyz": [
+        1,
+        1,
+        1
+      ],
+      "orientation": "xyz",
+      "pec_backing": true
+    }
+  },
+  "initial_design": {
+    "parameters": {
+      "level_half_width": 0.363865233491,
+      "period_mm": 12.116225416164,
+      "topology": "Gyroid",
+      "material_id": "M4"
+    }
+  },
+  "proposal_budget": 5,
+  "simulation": {
+    "profile": "tpms-fd-v1",
+    "solve_modes": [
+      "TE00",
+      "TM00"
+    ],
+    "frequency_band_GHz": [
+      2.0,
+      18.0
+    ],
+    "frequency_samples": 1009,
+    "fresh_project_per_design_angle": true
+  },
+  "prompt": "Design a TPMS microwave absorber. Within 5-16 GHz, at incidence angle(s) 50 degrees (azimuth 0), achieve reflection loss <= -4.5 dB with mean qualified-band coverage >= 0.925 over the prescribed TE/TM conditions. Start from the supplied initial design, obey all fixed parameters and variable bounds, and use at most five new design proposals."
+}

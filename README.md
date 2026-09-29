@@ -30,9 +30,19 @@ AbsorbEvo explores AI-assisted design and computational study of microwave-absor
 
 The main research work is complete, and a manuscript draft has been prepared.
 
+### AbsorbBench-36 · Public benchmark
+
+[**Use AbsorbBench-36 →**](benchmarks/AbsorbBench-36/README.md)
+
+Evaluate your own design agent on **36 fixed microwave-absorber tasks**: 18 honeycomb sandwich tasks and 18 TPMS tasks, split into 8 development, 4 validation and 24 test tasks. The standard budget is five new design proposals per task.
+
+The public package includes machine-readable tasks, common initial designs, parameter bounds, material/geometry specifications, and Python validation and scoring tools. Supply your own agent and full-wave solver. **No AbsorbEvo test results, optimized designs or performance trajectories are included.**
+
+[Task index](benchmarks/AbsorbBench-36/tasks.csv) · [Evaluation protocol](benchmarks/AbsorbBench-36/docs/protocol.md) · [中文使用说明](benchmarks/AbsorbBench-36/README_zh.md)
+
 ### Public scope
 
-This repository shares a public project overview and Figure 1 from the manuscript. The full manuscript, source code, research data, and other figures are not included.
+This repository shares a public project overview, Figure 1 from the manuscript, and the result-free AbsorbBench-36 task-and-evaluation package. The full manuscript, private AbsorbEvo implementation, experimental results, and other manuscript figures are not included.
 
 **Researcher:** [Zhicheng Feng](https://github.com/ZhichengFeng)
 
@@ -46,6 +56,7 @@ This repository shares a public project overview and Figure 1 from the manuscrip
 
 - **研究主题：** 微波吸波结构设计、物理知识辅助的计算研究、电磁仿真与科学评价。
 - **项目状态：** 主要研究工作已完成，论文初稿已形成。
-- **公开范围：** 本仓库展示项目概览与论文图 1；完整论文、源代码、研究数据和其他图表不公开。
+- **公开基准：** [AbsorbBench-36](benchmarks/AbsorbBench-36/README_zh.md) 提供36项固定任务、初始设计参数、建模说明与评分工具，可用于测试其他智能体；每项任务五次新设计提案。
+- **公开范围：** 项目概览、论文图1及不含测试结果的基准包。完整论文、AbsorbEvo私有实现、实验结果和其他论文图表不公开。
 
 **研究者：** [冯志成](https://github.com/ZhichengFeng)

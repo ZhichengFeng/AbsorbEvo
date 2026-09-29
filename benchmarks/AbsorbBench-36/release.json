@@ -1,0 +1,19 @@
+{
+  "benchmark": "AbsorbBench-36",
+  "version": "1.0.0",
+  "task_count": 36,
+  "family_counts": {
+    "Honeycomb": 18,
+    "TPMS": 18
+  },
+  "split_counts": {
+    "development": 8,
+    "test": 24,
+    "validation": 4
+  },
+  "identifier_policy": "All public task IDs use the AB36 prefix; numeric suffixes and scientific task definitions are preserved.",
+  "contents": "Frozen tasks, initial parameters, physical specifications, geometry mappings, and evaluation utilities.",
+  "research_results_included": false,
+  "initial_scores_included": false,
+  "solver_and_agent_implementation_included": false
+}

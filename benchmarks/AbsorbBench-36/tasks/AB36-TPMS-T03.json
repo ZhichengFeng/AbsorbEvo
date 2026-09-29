@@ -1,0 +1,100 @@
+{
+  "schema_version": "absorbbench36.task.v1",
+  "benchmark": "AbsorbBench-36",
+  "release": "1.0.0",
+  "task_id": "AB36-TPMS-T03",
+  "family": "TPMS",
+  "split": "test",
+  "objective": {
+    "frequency_band_GHz": [
+      5.0,
+      18.0
+    ],
+    "angles_deg": [
+      0.0,
+      30.0,
+      60.0
+    ],
+    "azimuth_deg": 0,
+    "polarizations": [
+      "TE",
+      "TM"
+    ],
+    "reflection_loss_threshold_dB": -5.5,
+    "required_coverage": 0.86,
+    "aggregation": "equal_mean_over_angles_and_selected_polarizations"
+  },
+  "design_space": {
+    "parameterization": "TARGET_VF_V1",
+    "variables": {
+      "target_vf": {
+        "type": "number",
+        "minimum": 0.3,
+        "maximum": 0.7,
+        "unit": "fraction",
+        "step": 0.01
+      },
+      "period_mm": {
+        "type": "number",
+        "minimum": 15.0,
+        "maximum": 20.0,
+        "unit": "mm"
+      },
+      "topology": {
+        "type": "string",
+        "enum": [
+          "Primitive",
+          "Gyroid",
+          "Diamond"
+        ]
+      },
+      "material_id": {
+        "type": "string",
+        "enum": [
+          "M3",
+          "M4",
+          "M5",
+          "M6",
+          "M7"
+        ]
+      }
+    },
+    "fixed_parameters": {
+      "grid_size": [
+        64,
+        64,
+        64
+      ],
+      "number_of_periods_xyz": [
+        1,
+        1,
+        1
+      ],
+      "orientation": "xyz",
+      "pec_backing": true
+    }
+  },
+  "initial_design": {
+    "parameters": {
+      "target_vf": 0.64,
+      "period_mm": 18.784971001941,
+      "topology": "Primitive",
+      "material_id": "M3"
+    }
+  },
+  "proposal_budget": 5,
+  "simulation": {
+    "profile": "tpms-fd-v1",
+    "solve_modes": [
+      "TE00",
+      "TM00"
+    ],
+    "frequency_band_GHz": [
+      2.0,
+      18.0
+    ],
+    "frequency_samples": 1009,
+    "fresh_project_per_design_angle": true
+  },
+  "prompt": "Design a TPMS microwave absorber. Within 5-18 GHz, at incidence angle(s) 0, 30, 60 degrees (azimuth 0), achieve reflection loss <= -5.5 dB with mean qualified-band coverage >= 0.86 over the prescribed TE/TM conditions. Start from the supplied initial design, obey all fixed parameters and variable bounds, and use at most five new design proposals."
+}

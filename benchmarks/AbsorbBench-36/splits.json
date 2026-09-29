@@ -1,0 +1,44 @@
+{
+  "development": [
+    "AB36-HC-D01",
+    "AB36-HC-D02",
+    "AB36-HC-D03",
+    "AB36-HC-D04",
+    "AB36-TPMS-D01",
+    "AB36-TPMS-D02",
+    "AB36-TPMS-D03",
+    "AB36-TPMS-D04"
+  ],
+  "validation": [
+    "AB36-HC-V01",
+    "AB36-HC-V02",
+    "AB36-TPMS-V01",
+    "AB36-TPMS-V02"
+  ],
+  "test": [
+    "AB36-HC-T01",
+    "AB36-HC-T02",
+    "AB36-HC-T03",
+    "AB36-HC-T04",
+    "AB36-TPMS-T01",
+    "AB36-TPMS-T02",
+    "AB36-TPMS-T03",
+    "AB36-TPMS-T04",
+    "AB36-HC-T05",
+    "AB36-HC-T06",
+    "AB36-HC-T07",
+    "AB36-HC-T08",
+    "AB36-HC-T09",
+    "AB36-HC-T10",
+    "AB36-HC-T11",
+    "AB36-HC-T12",
+    "AB36-TPMS-T05",
+    "AB36-TPMS-T06",
+    "AB36-TPMS-T07",
+    "AB36-TPMS-T08",
+    "AB36-TPMS-T09",
+    "AB36-TPMS-T10",
+    "AB36-TPMS-T11",
+    "AB36-TPMS-T12"
+  ]
+}

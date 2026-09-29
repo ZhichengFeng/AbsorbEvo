@@ -1,8 +1,16 @@
-# Public showcase allowlist: ignore everything unless explicitly listed below.
-# Only Figure 1 is approved for display. Never force-add other research materials.
+# Public release allowlist. Research results and local build products stay private.
 *
 !.gitignore
 !README.md
 !assets/
 !assets/hero.svg
 !assets/figure1.png
+!benchmarks/
+!benchmarks/AbsorbBench-36/
+!benchmarks/AbsorbBench-36/**/
+!benchmarks/AbsorbBench-36/**/*.md
+!benchmarks/AbsorbBench-36/**/*.json
+!benchmarks/AbsorbBench-36/**/*.csv
+!benchmarks/AbsorbBench-36/**/*.py
+!benchmarks/AbsorbBench-36/LICENSE
+!benchmarks/AbsorbBench-36/.gitattributes

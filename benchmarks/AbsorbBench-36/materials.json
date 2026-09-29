@@ -1,0 +1,57 @@
+{
+  "time_convention": "exp(+j*omega*t)",
+  "relative_permeability": 1,
+  "debye_equation": "epsilon_inf + (epsilon_static-epsilon_inf)/(1+j*2*pi*f_GHz*tau_ns)",
+  "tpms": {
+    "M2": {
+      "epsilon_inf": 3.003,
+      "epsilon_static": 3.751,
+      "tau_ns": 0.008
+    },
+    "M3": {
+      "epsilon_inf": 3.686,
+      "epsilon_static": 5.24,
+      "tau_ns": 0.01
+    },
+    "M4": {
+      "epsilon_inf": 4.408,
+      "epsilon_static": 6.905,
+      "tau_ns": 0.012
+    },
+    "M5": {
+      "epsilon_inf": 5.154,
+      "epsilon_static": 8.783,
+      "tau_ns": 0.014
+    },
+    "M6": {
+      "epsilon_inf": 6.014,
+      "epsilon_static": 11.214,
+      "tau_ns": 0.016
+    },
+    "M7": {
+      "epsilon_inf": 6.905,
+      "epsilon_static": 13.958,
+      "tau_ns": 0.018
+    },
+    "M8": {
+      "epsilon_inf": 7.76,
+      "epsilon_static": 17.406,
+      "tau_ns": 0.02
+    }
+  },
+  "honeycomb": {
+    "Nomex": {
+      "epsilon_r": 3.8,
+      "loss_tangent": 0.015
+    },
+    "skin": {
+      "epsilon_r": 3.3,
+      "loss_tangent": 0.015
+    },
+    "adhesive": {
+      "epsilon_r": 3.4,
+      "loss_tangent": 0.015
+    },
+    "coating": "task-specific single-pole Debye parameters"
+  }
+}

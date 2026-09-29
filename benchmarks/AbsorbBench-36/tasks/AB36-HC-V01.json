@@ -1,0 +1,89 @@
+{
+  "schema_version": "absorbbench36.task.v1",
+  "benchmark": "AbsorbBench-36",
+  "release": "1.0.0",
+  "task_id": "AB36-HC-V01",
+  "family": "Honeycomb",
+  "split": "validation",
+  "objective": {
+    "frequency_band_GHz": [
+      6.0,
+      18.0
+    ],
+    "angles_deg": [
+      0.0,
+      30.0
+    ],
+    "azimuth_deg": 0,
+    "polarizations": [
+      "TM"
+    ],
+    "reflection_loss_threshold_dB": -10.0,
+    "required_coverage": 0.95,
+    "aggregation": "equal_mean_over_angles_and_selected_polarizations"
+  },
+  "design_space": {
+    "parameterization": "HONEYCOMB_CONTINUOUS_V1",
+    "variables": {
+      "coating_thickness_mm": {
+        "type": "number",
+        "minimum": 0.203,
+        "maximum": 0.5,
+        "unit": "mm"
+      },
+      "core_height_mm": {
+        "type": "number",
+        "minimum": 3.0,
+        "maximum": 19.2,
+        "unit": "mm"
+      },
+      "epsilon_inf": {
+        "type": "number",
+        "minimum": 9.0,
+        "maximum": 21.0,
+        "unit": "relative permittivity"
+      },
+      "epsilon_static": {
+        "type": "number",
+        "minimum": 192.0,
+        "maximum": 228.0,
+        "unit": "relative permittivity"
+      },
+      "tau_ns": {
+        "type": "number",
+        "minimum": 0.06,
+        "maximum": 0.09,
+        "unit": "ns"
+      }
+    },
+    "fixed_parameters": {
+      "cell_angle_deg": 60.0,
+      "cell_width_mm": 2.85,
+      "wall_thickness_mm": 0.048
+    }
+  },
+  "initial_design": {
+    "parameters": {
+      "coating_thickness_mm": 0.44350318359,
+      "core_height_mm": 8.649632058092,
+      "epsilon_inf": 11.870063917231,
+      "epsilon_static": 194.532373793682,
+      "tau_ns": 0.068810155651
+    }
+  },
+  "proposal_budget": 5,
+  "simulation": {
+    "profile": "honeycomb-fd-v1",
+    "solve_modes": [
+      "TE00",
+      "TM00"
+    ],
+    "frequency_band_GHz": [
+      2.0,
+      18.0
+    ],
+    "frequency_samples": 1001,
+    "fresh_project_per_design_angle": true
+  },
+  "prompt": "Design a coated honeycomb sandwich microwave absorber. Within 6-18 GHz, at incidence angle(s) 0, 30 degrees (azimuth 0), achieve reflection loss <= -10 dB with mean qualified-band coverage >= 0.95 over the prescribed TM conditions. Start from the supplied initial design, obey all fixed parameters and variable bounds, and use at most five new design proposals."
+}
