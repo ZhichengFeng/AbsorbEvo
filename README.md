@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/hero.svg" alt="AbsorbEvo: AI-assisted design of microwave-absorbing structures" width="100%">
-</p>
-
 # AbsorbEvo
 
 **Physics-guided agents for microwave-absorber inverse design**
