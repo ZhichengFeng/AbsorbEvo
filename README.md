@@ -1,62 +1,71 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="AbsorbEvo — AI-assisted design of microwave-absorbing structures" width="100%">
+  <img src="assets/hero.svg" alt="AbsorbEvo: AI-assisted design of microwave-absorbing structures" width="100%">
 </p>
 
 # AbsorbEvo
 
-**AI-Assisted Design of Microwave-Absorbing Structures**
+**Physics-guided agents for microwave-absorber inverse design**
 
-AbsorbEvo explores AI-assisted design and computational study of microwave-absorbing structures, bringing together artificial intelligence, physical knowledge, and electromagnetic simulation.
+AbsorbEvo connects language-model planning, physics-prior candidate ranking, full-wave simulation, and verified feedback to design **coated honeycomb sandwich structures** and **triply periodic minimal surface (TPMS) absorbers**. A separate cross-task Skill loop distills training experience into reusable textual guidance.
 
-### Framework overview · 框架概览
+[**Explore AbsorbBench-36**](benchmarks/AbsorbBench-36/) · [Architecture](#architecture) · [Design workflow](#design-workflow) · [Search mechanism](#search-mechanism) · [Design examples](#design-examples)
+
+## AbsorbBench-36
+
+An open benchmark for evaluating **your own design agent**, with fixed task definitions, common initial designs, physical specifications, and evaluation tools.
+
+| Design families | Tasks | Split | Proposal budget |
+|---|---:|---|---|
+| Honeycomb sandwich + TPMS | **36** (18 per family) | **8** development / **4** validation / **24** test | **5** new designs per task |
+
+[**Get started →**](benchmarks/AbsorbBench-36/README.md) · [Task index](benchmarks/AbsorbBench-36/tasks.csv) · [Evaluation protocol](benchmarks/AbsorbBench-36/docs/protocol.md) · [Agent integration](benchmarks/AbsorbBench-36/docs/integration.md)
+
+The benchmark package contains no AbsorbEvo method scores, optimized designs, or experimental trajectories. Supply your own agent and full-wave solver; the included Python tools validate inputs and score exported spectra.
+
+## Architecture
 
 <p align="center">
   <a href="assets/figure1.png">
-    <img src="assets/figure1.png" alt="Figure 1. AbsorbEvo dual-loop architecture combining physics-guided design and cross-task Skill evolution" width="100%">
+    <img src="assets/figure1.png" alt="AbsorbEvo architecture: physics-guided design with planning, prior screening, full-wave evaluation and feedback, alongside training-only cross-task Skill evolution" width="100%">
   </a>
 </p>
 
-**Figure 1 | Dual-loop architecture of AbsorbEvo.** Physics-guided design and cross-task Skill evolution. The before/after curves are illustrative. [View full-resolution figure](assets/figure1.png).
+**Two connected learning loops.** Within each task, planning and candidate screening lead to full-wave verification and the next design proposal. Across training tasks, experience is distilled into textual Skills, validated, and reused on later tasks. The before/after curves in this architecture diagram are illustrative. [Open image](assets/figure1.png).
 
-**图 1｜AbsorbEvo 双闭环架构。** 物理引导设计与跨任务 Skill 演化；图中前后对比曲线为示意。[查看高清图](assets/figure1.png)。
+## Design workflow
 
-### Research themes
+<p align="center">
+  <a href="assets/design-workflow.png">
+    <img src="assets/design-workflow.png" alt="Four-panel design workflow showing the typed task interface, explicit honeycomb and implicit TPMS builders, physics-prior ranking and full-wave simulation, and physics evaluation" width="100%">
+  </a>
+</p>
 
-- Microwave-absorbing structure design
-- Physics-informed computational research
-- Electromagnetic simulation and scientific evaluation
+**From a design request to a verified proposal.** A typed task interface specifies the design space and goals. Geometry builders produce the physical model; the physics prior ranks candidate designs before full-wave evaluation. Evidence checks and task-specific criteria determine whether a proposal is valid and meets the goal. [Open image](assets/design-workflow.png).
 
-### Project status
+## Search mechanism
 
-The main research work is complete, and a manuscript draft has been prepared.
+<p align="center">
+  <a href="assets/search-mechanism.png">
+    <img src="assets/search-mechanism.png" alt="Search mechanism with global and plan-directed candidates, a two-dimensional prior coverage landscape, and a local view of five proposals and the retained verified-best path" width="100%">
+  </a>
+</p>
 
-### AbsorbBench-36 · Public benchmark
+**Global exploration with feedback-directed refinement.** The conceptual panel shows how candidate generation and verified feedback interact. The two-dimensional case plots locate the proposals on a prior-predicted coverage landscape and distinguish the retained verified-best path from an unretained trial. Prior predictions and full-wave outcomes are shown separately. [Open image](assets/search-mechanism.png).
 
-[**Use AbsorbBench-36 →**](benchmarks/AbsorbBench-36/README.md)
+## Design examples
 
-Evaluate your own design agent on **36 fixed microwave-absorber tasks**: 18 honeycomb sandwich tasks and 18 TPMS tasks, split into 8 development, 4 validation and 24 test tasks. The standard budget is five new design proposals per task.
+<p align="center">
+  <a href="assets/design-examples.png">
+    <img src="assets/design-examples.png" alt="Honeycomb and TPMS design examples with user queries, agent plans, physical geometries, spectral evolution from Initial through five proposals, and initial versus best-verified absorption curves" width="100%">
+  </a>
+</p>
 
-The public package includes machine-readable tasks, common initial designs, parameter bounds, material/geometry specifications, and Python validation and scoring tools. Supply your own agent and full-wave solver. **No AbsorbEvo test results, optimized designs or performance trajectories are included.**
+**Two structure families, a shared design process.** The honeycomb example targets 2–18 GHz at normal-incidence TE illumination; the TPMS example targets 4–14 GHz at 40° TM incidence. Each row connects the request and plan to geometry, spectral evolution, and the best-verified absorption curve. These selected research examples illustrate the workflow; they are separate from the result-free benchmark package. [Open image](assets/design-examples.png).
 
-[Task index](benchmarks/AbsorbBench-36/tasks.csv) · [Evaluation protocol](benchmarks/AbsorbBench-36/docs/protocol.md) · [中文使用说明](benchmarks/AbsorbBench-36/README_zh.md)
+## Project status and public scope
 
-### Public scope
+The main research study is complete and a manuscript draft has been prepared. This repository provides the project overview, the selected figures above, and the **AbsorbBench-36 task-and-evaluation package**. The full manuscript, private agent implementation, raw simulation records, and complete method-comparison results are not distributed here.
 
-This repository shares a public project overview, Figure 1 from the manuscript, and the result-free AbsorbBench-36 task-and-evaluation package. The full manuscript, private AbsorbEvo implementation, experimental results, and other manuscript figures are not included.
+The benchmark directory is available under its [MIT License](benchmarks/AbsorbBench-36/LICENSE). That license does not extend to the manuscript figures in `assets/`.
 
 **Researcher:** [Zhicheng Feng](https://github.com/ZhichengFeng)
-
----
-
-### 中文概览
-
-**AbsorbEvo — 智能微波吸波结构设计研究**
-
-本项目聚焦微波吸波结构的智能辅助设计与计算研究，探索人工智能、物理知识与电磁仿真在科研工作流中的协同应用。
-
-- **研究主题：** 微波吸波结构设计、物理知识辅助的计算研究、电磁仿真与科学评价。
-- **项目状态：** 主要研究工作已完成，论文初稿已形成。
-- **公开基准：** [AbsorbBench-36](benchmarks/AbsorbBench-36/README_zh.md) 提供36项固定任务、初始设计参数、建模说明与评分工具，可用于测试其他智能体；每项任务五次新设计提案。
-- **公开范围：** 项目概览、论文图1及不含测试结果的基准包。完整论文、AbsorbEvo私有实现、实验结果和其他论文图表不公开。
-
-**研究者：** [冯志成](https://github.com/ZhichengFeng)

@@ -4,7 +4,7 @@ A fixed-task benchmark for evaluating autonomous agents on **microwave-absorber 
 
 This release provides task definitions and evaluation tools, **without AbsorbEvo's test results, optimized designs, trajectories, or baseline scores**. It is independent of a particular language model or agent architecture.
 
-[中文说明](README_zh.md) · [Task index](tasks.csv) · [Evaluation protocol](docs/protocol.md) · [Geometry and simulation](docs/modeling.md) · [Integration guide](docs/integration.md)
+[Task index](tasks.csv) · [Evaluation protocol](docs/protocol.md) · [Geometry and simulation](docs/modeling.md) · [Integration guide](docs/integration.md)
 
 ## Dataset
 
