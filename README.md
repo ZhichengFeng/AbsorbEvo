@@ -2,7 +2,7 @@
 
 **Physics-guided agents for microwave-absorber inverse design**
 
-AbsorbEvo connects language-model planning, physics-prior candidate ranking, full-wave simulation, and verified feedback to design **coated honeycomb sandwich structures** and **triply periodic minimal surface (TPMS) absorbers**. A separate cross-task Skill loop distills training experience into reusable textual guidance.
+AbsorbEvo translates natural-language performance goals into microwave-absorber designs verified by full-wave simulation. It combines language-model planning, physics-prior candidate ranking, and verified feedback in a shared workflow for explicit and implicit geometry models. The current study uses **coated honeycomb sandwich structures** as an explicit model and **triply periodic minimal surface (TPMS) structures** as an implicit model. A separate cross-task Skill loop distills training experience into reusable design guidance.
 
 [**Explore AbsorbBench-36**](benchmarks/AbsorbBench-36/) · [Architecture](#architecture) · [Design workflow](#design-workflow) · [Search mechanism](#search-mechanism) · [Design examples](#design-examples)
 
