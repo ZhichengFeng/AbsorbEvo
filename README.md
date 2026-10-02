@@ -65,3 +65,19 @@ The main research study is complete and a manuscript draft has been prepared. Th
 The benchmark directory is available under its [MIT License](benchmarks/AbsorbBench-36/LICENSE). That license does not extend to the manuscript figures in `assets/`.
 
 **Researcher:** [Zhicheng Feng](https://github.com/ZhichengFeng)
+
+## Citation
+
+If you use AbsorbEvo or AbsorbBench-36 in your research, please cite [our paper](https://arxiv.org/abs/2610.01119):
+
+```bibtex
+@misc{feng2026absorbevo,
+  title         = {{AbsorbEvo}: An Agentic Framework for Autonomous Inverse Design of Microwave Absorbers},
+  author        = {Feng, Zhicheng and Zhao, Yubo and Yao, Xuefeng},
+  year          = {2026},
+  eprint        = {2610.01119},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  url           = {https://arxiv.org/abs/2610.01119}
+}
+```
